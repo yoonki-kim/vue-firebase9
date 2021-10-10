@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app'
+import { getAuth, connectAuthEmulator } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCboYGDyrAIf1UjzHhHTkTSOHx6LUTclxI',
@@ -10,3 +11,7 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
+
+export const auth = getAuth(app)
+connectAuthEmulator(auth, 'http://localhost:9099')
+auth.languageCode = 'ko'
