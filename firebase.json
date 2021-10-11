@@ -10,7 +10,8 @@
     "predeploy": [
       "npm --prefix \"$RESOURCE_DIR\" run lint",
       "npm --prefix \"$RESOURCE_DIR\" run build"
-    ]
+    ],
+    "source": "functions"
   },
   "hosting": {
     "public": "dist",
@@ -31,7 +32,7 @@
       "port": 5001
     },
     "firestore": {
-      "port": 8081
+      "port": 5002
     },
     "database": {
       "port": 9000
@@ -49,7 +50,5 @@
       "enabled": true
     }
   },
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
-  }
+  "remoteconfig": {}
 }
